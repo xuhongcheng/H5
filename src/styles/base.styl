@@ -1,0 +1,49 @@
+html{
+	height: 100%;
+	overflow-y: auto
+}
+
+body{
+	width: 100%;
+    overflow-x: hidden;
+    color: #341e00;
+    font-family: Arial,Helvetica,sans-serif;
+}
+#app{
+	font-family: 'Avenir', Helvetica, Arial, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	color: #2c3e50;
+}
+#app .wrapper{
+	max-width: 10.0rem;
+  overflow: hidden;
+  margin: 0 auto;
+  min-height:200px;
+}
+.globalTip{
+  position:fixed;
+  z-index:999;
+  background:rgba(0,0,0,0.6);
+  color:#fff;
+  padding: 15px 30px;
+  border-radius:6px;
+  font-size:30px;/*px*/
+  left:50%;
+  top:50%;
+  transform:translate(-50%,-50%);
+  text-align:center;
+  animation:show 0.4s ease;
+}
+.tipHide{
+	display: none;
+	animation:hide 0.4s ease-out; 
+}
+@-webkit-keyframes show {
+	0% {opacity:0;}
+	100% {opacity:1;}
+}
+@-webkit-keyframes hide {
+	0% {opacity:1;}
+	100% {opacity:0;}
+}
