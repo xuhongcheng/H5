@@ -1,9 +1,13 @@
 import axios from 'axios'
-
+import querystring from 'querystring'
 // create axios实例
 const ajax = axios.create({
   baseURL: process.env.BASE_API, // api的base_url
-  timeout: 5000 // 请求超时时间
+  timeout: 5000,// 请求超时时间
+  transformRequest: [function (data) {
+    // Do whatever you want to transform the data
+    return querystring.stringify(data)
+  }],
 })
 
 // request 统一配置拦截器
