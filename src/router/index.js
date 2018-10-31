@@ -10,8 +10,8 @@ export default new Router({
   routes: [
     {
 	    path: '/',
-	    name: 'center',
-	    component: _import('center')
+	    name: 'hello',
+	    component: _import('hello')
     },
   ]
 })
