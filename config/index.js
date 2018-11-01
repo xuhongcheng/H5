@@ -6,13 +6,12 @@ const path = require('path')
 
 module.exports = {
   dev: {
-
     // Paths
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     proxyTable: {
       '/api': {
-        target: 'http://120.24.76.242:8089/mockjsdata/5/',//设置你调用的接口域名和端口号 别忘了加http
+        target: 'http://120.24.76.242:8089/mockjsdata/5/',//设置你调用的接口域名和端口号
         changeOrigin: true,
         pathRewrite: {
           '^/api': '/'
